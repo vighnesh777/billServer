@@ -8,7 +8,7 @@ const Bill=require('./modals/bill');
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGOURL,{useNewUrlParser:true,useUnifiedTopology:true},(err)=>{
+mongoose.connect("mongodb://127.0.0.1:27017/BILLS",{useNewUrlParser:true,useUnifiedTopology:true},(err)=>{
     if(err){
         console.log(err);
     }
